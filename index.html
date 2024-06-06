@@ -7,11 +7,11 @@
     <title>Feliz Dia Dos Namorados</title>
 
     <style>
-        body {
+        body{
             background-color: red;
         }
 
-        .painel {
+        .painel{
             margin: auto;
             background-color: white;
             width: 500px;
@@ -20,10 +20,18 @@
             text-align: center;
             padding-top: 50px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            position: relative;
         }
-
-        #sim {
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
             height: 40px;
             width: 60px;
             background-color: red;
@@ -33,34 +41,27 @@
             margin-left: 10px;
         }
 
-        #nao {
-            position: absolute;
-            height: 40px;
-            width: 60px;
-            background-color: red;
-            border: 2px solid white;
-            border-radius: 10px;
-            color: white;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
+
 </head>
 <body>
 
     <div class="painel">
-        <h2> Por favor, será que você poderia</h2>
-        <h1>Liberar a preciosa? </h1>
-        
+        <h1> Por favor, será que você poderia...</h1>
+
         <img src="https://gifman.net/wp-content/uploads/2019/06/ursinhos-fofos-coracoes.gif" alt="">
 
-        <a href="https://www.youtube.com/watch?v=-ueQN29M0s8"><button id="sim"> Sim! </button></a>
+        <h2>ME BEIJAR NA BOCA?</h2>
+        
+
+        <a href="https://www.youtube.com/watch?v=-ueQN29M0s8"><button id="sim" > Sim! </button></a>
         <button onmouseover="fuja()" id="nao"> Não! </button>
+        
     </div>
 
     <script>
-        function fuja() {
-            var botaoNao = document.getElementById("nao");
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
 
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
@@ -71,10 +72,15 @@
             var aleatorioX = Math.floor(Math.random() * maxX);
             var aleatorioY = Math.floor(Math.random() * maxY);
 
-            botaoNao.style.position = 'absolute';
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
+
+
         }
     </script>
+
+
+
+    
 </body>
 </html>
